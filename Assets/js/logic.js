@@ -5,22 +5,22 @@ var currentQuestionIndex = 0;
 var timerId;
 
 // variables to reference DOM elements
-var questionsEl = document.getElementById('');
-var timerEl = document.getElementById('');
-var choicesEl = document.getElementById('');
-var submitBtn = document.getElementById('');
-var startBtn = document.getElementById('');
-var initialsEl = document.getElementById('');
-var feedbackEl = document.getElementById('');
+var questionsEl = document.getElementById('questions');
+var timerEl = document.getElementById('timer');
+var choicesEl = document.getElementById('choices');
+var submitBtn = document.getElementById('submit');
+var startBtn = document.getElementById('start');
+var initialsEl = document.getElementById('initials');
+var feedbackEl = document.getElementById('answerFeedback');
 
 
 function startQuiz() {
   // hide start screen
-  var startScreenEl = document.getElementById('');
-  startScreenEl.setAttribute('class', '');
+  var startScreenEl = document.getElementById('questions');
+  startScreenEl.setAttribute('class', 'questions');
 
   // un-hide questions section
-  questionsEl.removeAttribute('');
+  questionsEl.removeAttribute('start');
 
   // start timer
   timerId = setInterval(clockTick, 1000);
