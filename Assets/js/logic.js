@@ -17,7 +17,7 @@ var feedbackEl = document.getElementById('answerFeedback');
 function startQuiz() {
   // hide start screen
   var startScreenEl = document.getElementById('questions');
-  startScreenEl.setAttribute('class', 'questions');
+  startScreenEl.setAttribute('class', 'hide');
 
   // un-hide questions section
   questionsEl.removeAttribute('start');
