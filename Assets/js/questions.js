@@ -6,14 +6,19 @@ const questions = [
     answer: '3',
   },
   {
-    questionTitle: 'What does JavaScript stand for?',
-    choices: ['Javamocha Scripture', 'Javalin Scription', 'JavaScript', 'Java Core Scripting Methodology'],
-    answer: 'JavaScript',
+    questionTitle: 'How do you write "Hello, World" in an alert pop up?',
+    choices: ['msg("Hello, World")', 'alert("Hello, World")', 'alertPopUp("Hello, World")', 'msgBox("Hello, World")'],
+    answer: 'alert("Hello, World")',
   },
   {
     questionTitle: 'What year was JavaScript created?',
     choices: ['1989', '1990', '1995', '2001'],
     answer: '1995',
+  },
+  {
+    questionTitle: 'Which format should be used to reference external JS file within HTML?',
+    choices: ['<script href = ...', '<script file = ...', '<script src = ...', '<script img = ...'],
+    answer: '<script src = ...',
   },
   {
     questionTitle: 'What browser was JavaScript originally created for?',
@@ -30,5 +35,4 @@ const questions = [
     choices: ['Adds 2 to i', 'Nothing, the 2 plus signs cancel each other out', 'Adds 1 to i', 'Changes variable "i" to a number'],
     answer: 'Adds 1 to i',
   },
-  
 ];
