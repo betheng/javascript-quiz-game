@@ -1,38 +1,66 @@
 // list of all questions, choices, and answers
-const questions = [
-  {
-    questionTitle: 'As of 2022, where did JavaScript rank for most popular languages in the world ?',
-    choices: ['1', '2', '3', '4'],
-    answer: '3',
+var questions = [
+    { 
+        question: "Commonly used data types DO NOT include:", 
+        answers: [
+            { text: "booleans", correct: false },
+            { text: "alerts" , correct: true },
+            { text: "numbers", correct: false },
+            { text: "strings", correct: false }
+        ]
+    },
+    { 
+        question: "The condition in an if / else statement is enclosed within ____.", 
+        answers: [
+            { text: "parentheses", correct: false },
+            { text: "quotes", correct: false },
+            { text: "curly brackets", correct: true },
+            { text: "square brackets", correct: false }
+        ]
+    },
+    { 
+        question: "Which built-in method removes the last element from an array and returns that element?", 
+        answers: [
+            { text: "pop()", correct: true },
+            { text: "last()", correct: false },
+            { text: "get()", correct: false },
+            { text: "None of the above", correct: false }
+        ]
+    },
+    { 
+        question: "What is the correct syntax for a JavaScript array?", 
+        answers: [
+            { text: "var car = (0:'sedan', 1:'SUV', 2:'compact')", correct: false },
+            { text: "var car = ['sedan', 'SUV', 'compact']", correct: true },
+            { text: "var car = (sedan, SUV, compact)", correct: false },
+            { text: "None of the above", correct: false }
+        ]
+    },
+    { 
+        question: "Which built-in method returns the calling string value converted to lower case?",
+        answers: [
+            { text: "toLowerCase()", correct: true },
+            { text: "changeCase(case)", correct: false },
+            { text: "toLower()", correct: false },
+            { text: "None of the above", correct: false }
+        ]
+    },
+    { 
+      question: "Which of the following function of Number object returns the number's value?",
+      answers: [
+          { text: "valueOf()", correct: true },
+          { text: "toString()", correct: false },
+          { text: "toLocaleString()", correct: false },
+          { text: "toPrecision()", correct: false }
+      ]
   },
-  {
-    questionTitle: 'How do you write "Hello, World" in an alert pop up?',
-    choices: ['msg("Hello, World")', 'alert("Hello, World")', 'alertPopUp("Hello, World")', 'msgBox("Hello, World")'],
-    answer: 'alert("Hello, World")',
-  },
-  {
-    questionTitle: 'What year was JavaScript created?',
-    choices: ['1989', '1990', '1995', '2001'],
-    answer: '1995',
-  },
-  {
-    questionTitle: 'Which format should be used to reference external JS file within HTML?',
-    choices: ['<script href = ...', '<script file = ...', '<script src = ...', '<script img = ...'],
-    answer: '<script src = ...',
-  },
-  {
-    questionTitle: 'What browser was JavaScript originally created for?',
-    choices: ['Netscape 2', 'AOL', 'Internet Explorer', 'Safari'],
-    answer: 'Netscape 2',
-  },
-  {
-    questionTitle: 'What type of programming language is JavaScript?',
-    choices: ['Core Processing', 'Object Oriented', 'NaN', 'Lean Java'],
-    answer: 'Object Oriented',
-  },
-  {
-    questionTitle: 'In Javascript, what does i++ do?',
-    choices: ['Adds 2 to i', 'Nothing, the 2 plus signs cancel each other out', 'Adds 1 to i', 'Changes variable "i" to a number'],
-    answer: 'Adds 1 to i',
-  },
+  { 
+    question: "Which of the following function of Array object joins all elements of an array into a string?",
+    answers: [
+        { text: "concat()", correct: false },
+        { text: "join()", correct: true },
+        { text: "pop()", correct: false },
+        { text: "map()", correct: false }
+    ]
+},
 ];

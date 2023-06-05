@@ -4,53 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Quiz: What do you know about JavaScript?</title>
+    <title>Coding Quiz - Test Your JavaScript Knowledge</title>
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
 
   <body>
-    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+    <div id = viewHighScores class="scores">View Highscores</div>
 
-    <div class="timer">Time: <span id="time">0</span></div>
+    <div class="timer"> <span id="time">0</span></div>
 
     <div class="wrapper">
-      <div id="start-screen" class="start">
-        <h1>JavaScript Quiz</h1>
-        <p>
-        <!-- start screen and button -->
-        </p>
-        <button id="start">Start Quiz</button>
+      <div id="startSection" class="start">
+        <h1>JavaScript Quiz Challenge</h1>
+        <!-- welcome message on start screen -->
+              <p>Try to answer the following code-related questions with the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+  <!-- start button -->
+        <button id="startButton">Start Quiz</button>
       </div>
-        <!-- questions section -->
-      <div id="questions" class = hide >
-        <h2 id="questionTitle">Question will go here...</h2>
-        <div id="choices" class="choices">
-          <div class="choices">
-            <button data-number="1">1. Choice 1 here</button>
+        <!-- quiz -->
+        <section id="questionSection" class="hide">
+          <h1 id="question">Question</h1>
+          <div id="answerBtns" class="choices">
+              <button class="button">Answer 1</button>
+              <button class="button">Answer 2</button>
+              <button class="button">Answer 3</button>
+              <button class="button">Answer 4</button>
           </div>
-          <div class="choices">
-            <button data-number="2">2. Choice 2 here</button>
+          <h2 id="validateAnswer" class="hide"></h2>
+          <div class="button">
+              <button id="next" class="hide">Next</button>
           </div>
-          <div class="choices">
-            <button data-number="3">3. Choice 3 here</button>
-          </div>
-          <div class="choices">
-            <button data-number="4">4. Choice 4 here</button>
-          </div>
+      </section>
+
+      <section id="scoreContainer" class="hide">
+        <form id="submit-form">
+            <h3 id="your-score"></h3>
+            <label id="initials-label">Enter your initials to save the score:</label>
+            <input type="text" id="initialsEntry" placeholder="Enter your initials" />
+            <button id="submitBtn">Submit</button>
+        </form>
+    </section>
+
+    <section id="highscores" class="highscores-container hide">
+        <div id="high-scores">
+            <h1 class="centered">Leaderboard</h1>
+            <div id="highscore">
+            </div>
+            <div class="button">
+                <button id="backButton">Back</button>
+                <button id="clear">Clear Scores</button>
+            </div>
         </div>
-        <!-- end of quiz and scores -->
-      <div id="end-screen" class="hide">
-        <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
-          Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
-        </p>
-      </div>
-        <!-- Answer response to user selection -->
-      <div id="feedback" class="feedback hide"></div>
-    </div>
+        
+    </section>
 
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/logic.js"></script>
