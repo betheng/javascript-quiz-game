@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz: How well do YOU know JavaScript?</title>
-    <link rel="stylesheet" href="./Assets/styles.css">
-</head>
-<body>
-    <script src="./Assets/quizfunctionality.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz - Test Your JavaScript Knowledge</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div id = viewHighScores class="scores">View Highscores</div>
+
+    <div class="timer"> <span id="time">0</span></div>
+
+    <div class="wrapper">
+      <div id="startSection" class="start">
+        <h1>JavaScript Quiz Challenge</h1>
+        <!-- welcome message on start screen -->
+              <p>Try to answer the following code-related questions with the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+  <!-- start button -->
+        <button id="startButton">Start Quiz</button>
+      </div>
+        <!-- quiz -->
+        <section id="questionSection" class="hide">
+          <h1 id="question">Question</h1>
+          <div id="answerBtns" class="choices">
+              <button class="button">Answer 1</button>
+              <button class="button">Answer 2</button>
+              <button class="button">Answer 3</button>
+              <button class="button">Answer 4</button>
+          </div>
+          <h2 id="validateAnswer" class="hide"></h2>
+          <div class="button">
+              <button id="next" class="hide">Next</button>
+          </div>
+      </section>
+
+      <section id="scoreContainer" class="hide">
+        <form id="submit-form">
+            <h3 id="your-score"></h3>
+            <label id="initials-label">Enter your initials to save the score:</label>
+            <input type="text" id="initialsEntry" placeholder="Enter your initials" />
+            <button id="submitBtn">Submit</button>
+        </form>
+    </section>
+
+    <section id="highscores" class="highscores-container hide">
+        <div id="high-scores">
+            <h1 class="centered">Leaderboard</h1>
+            <div id="highscore">
+            </div>
+            <div class="button">
+                <button id="backButton">Back</button>
+                <button id="clear">Clear Scores</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
+  </body>
 </html>
